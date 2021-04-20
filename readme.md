@@ -30,3 +30,9 @@ Configurer la DB:
 ```
 # Taper l'adresse : http://localhost:8000/book
 >> On arrive sur le bon controller qui lance sa vue.
+# Test profiler
+Barre du bas, tester l'onglet rooting.
+```bash
+# Voir les routes, les noms de routes avec leurs méthodes.
+ symfony console debug:router
+```

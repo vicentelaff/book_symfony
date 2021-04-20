@@ -36,3 +36,14 @@ Barre du bas, tester l'onglet rooting.
 # Voir les routes, les noms de routes avec leurs méthodes.
  symfony console debug:router
 ```
+# Controller et routes
+## Annotations
+Ici avec nom de route préfixé par app_ et méthode HTTP.
+```php
+    #[Route('/book', name: 'book', methods={"GET"})]
+```
+## Méthodes et types de réponses:
+1. render() permet d'aller vers une vue html
+2. On peut aussi avoir d'autres types de réponses. (voir la méthode `message()`)
+## Routes et wildcards:
+L'art et la manière de gérer les paramètres des méthodes.

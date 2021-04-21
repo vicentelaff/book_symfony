@@ -114,6 +114,6 @@ Un fichier avec le code relatif au SGBD utilisé est créé.
     - Ajouter un champ `prix`
 2. Refaire une migration. (OK)
 3. Modifier la fixture. (OK)
-4. Ajouter au controller une méthode detail pour un livre.
+4. Ajouter au controller une méthode detail pour un livre. (OK)
     - Ajouter la vue `book/detail.html.twig`
-5. Dans la vue, ajouter un lien qui amène au detail.
+5. Dans la vue, ajouter un lien qui amène au detail. (OK)

@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<div class="container text-center bg-dark text-white py-3">
+    <div class="column mt-1">
+        {% for book in books %}
+            <h4>{{ book.title }}</h4>
+            <img src="{{ asset("images/" ~ book.cover) }}" alt="" class="h-50">
+            <p class="mt-2">Parution {{ book.parution|date("d/m/Y") }}</p>
+            {# ou alors: <a href="{{ path("app_book_detail", {"id":  book.id }) }}">Détails</a> #}
+            <a href="/detail/{{ book.id }}">Détails</a>
+            <hr>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

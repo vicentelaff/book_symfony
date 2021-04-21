@@ -66,10 +66,54 @@ __NB__:
 - {% %} pour éxecuter
 - {{ }} pour afficher
 #
-# Entity:
-## Créer une entité
+# Entity
+## Créer une entité:
 ```bash
  # Test console et mot clé = doctrine (ORM)
  symfony console
  symfony console make:entity
 ```
+## Modifier une entité:
+J'ai créé une entité mais j'ai oublié quelques attributs...
+```bash
+ # Test console et mot clé = doctrine (ORM)
+ symfony console
+ symfony console make:entity Book
+ # Ajouter le champ requis!
+```
+#
+# Migrations
+```bash
+ php bin/console make:migration
+# ou
+ symfony console make:migration
+```
+Un fichier avec le code relatif au SGBD utilisé est créé.
+```bash
+ php bin/console doctrine:migrations:migrate
+```
+#
+# Fixtures
+- Comment alimenter la DB pour la 1ere fois.
+- Système qui s'installe en mode dev.
+```bash
+ composer require --dev doctrine/doctrine-fixtures-bundle
+# À propos du cache:
+ symfony console cache:clear
+ # Execution:
+ symfony console doctrine:fixtures:load
+```
+#
+# Controller et BookRepository
+- Selection de Books enregistrés dans notre base
+- Plusieurs méthodes... à voir plus tard.
+
+# Suite à faire ensemble:
+1. Modifier l'entité Book: (OK)
+    - Ajouter un champ `résumé`
+    - Ajouter un champ `prix`
+2. Refaire une migration. (OK)
+3. Modifier la fixture. (OK)
+4. Ajouter au controller une méthode detail pour un livre.
+    - Ajouter la vue `book/detail.html.twig`
+5. Dans la vue, ajouter un lien qui amène au detail.

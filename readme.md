@@ -47,3 +47,29 @@ Ici avec nom de route préfixé par app_ et méthode HTTP.
 2. On peut aussi avoir d'autres types de réponses. (voir la méthode `message()`)
 ## Routes et wildcards:
 L'art et la manière de gérer les paramètres des méthodes.
+
+# Twig
+Voir le code autour du controller Book.
+## Exemple de code:
+```php
+{% block body %}
+    {% for d in data %}
+        {% if loop.index0 == 0 %}
+            <p style="text-align:center;font-size:30px;background-color:fuchsia">{{ d.name }} {{ d.action }}</p>
+        {% else %}
+            <p style="text-align:center;font-size:30px">{{ d.name }} {{ d.action }}</p>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+```
+__NB__:
+- {% %} pour éxecuter
+- {{ }} pour afficher
+#
+# Entity:
+## Créer une entité
+```bash
+ # Test console et mot clé = doctrine (ORM)
+ symfony console
+ symfony console make:entity
+```

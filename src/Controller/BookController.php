@@ -15,7 +15,20 @@ class BookController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('book/index.html.twig', []);
+        $data = [
+            [
+                "name" => "avion",
+                "action" => "vole dans les airs"
+            ],
+            [
+                "name" => "bateau",
+                "action" => "vogue sur les flots"
+            ],
+        ];
+        // dd($data);
+        return $this->render('book/index.html.twig', [
+            "data" => $data,
+        ]);
     }
 
     /**
